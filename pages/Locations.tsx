@@ -3,12 +3,13 @@ import { MapPin, Navigation, Phone } from 'lucide-react';
 import { Button } from '../components/Button';
 import { ClinicLocation } from '../types';
 
+// Updated with static high-quality images instead of random placeholders
 const locations: ClinicLocation[] = [
   {
     id: '1',
     name: 'Orange Cipinang',
     address: 'Jl. Cipinang Jaya Raya No.23, Jakarta Timur',
-    image: 'https://picsum.photos/400/300?random=101',
+    image: 'https://images.unsplash.com/photo-1535948967919-6169996e3871?q=80&w=800&auto=format&fit=crop', // Modern building/shopfront
     mapsUrl: '#',
     waUrl: '#'
   },
@@ -16,7 +17,7 @@ const locations: ClinicLocation[] = [
     id: '2',
     name: 'Orange Jatibening',
     address: 'Jl. Dr. Ratna No.88, Bekasi',
-    image: 'https://picsum.photos/400/300?random=102',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop', // Clean interior
     mapsUrl: '#',
     waUrl: '#'
   },
@@ -24,7 +25,7 @@ const locations: ClinicLocation[] = [
     id: '3',
     name: 'Orange Antasari',
     address: 'Jl. Pangeran Antasari No.10, Jakarta Selatan',
-    image: 'https://picsum.photos/400/300?random=103',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop', // Modern house/clinic
     mapsUrl: '#',
     waUrl: '#'
   },
@@ -32,7 +33,7 @@ const locations: ClinicLocation[] = [
     id: '4',
     name: 'Orange Harapan Indah',
     address: 'Ruko Boulevard Hijau, Bekasi',
-    image: 'https://picsum.photos/400/300?random=104',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop', // Commercial area
     mapsUrl: '#',
     waUrl: '#'
   }
