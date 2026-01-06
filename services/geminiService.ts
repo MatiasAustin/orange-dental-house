@@ -1,6 +1,19 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
+// Safely access process.env.API_KEY to prevent "process is not defined" errors in environments
+// that don't polyfill it (like some Vite configs or raw browser environments).
+const getApiKey = () => {
+  try {
+    if (typeof process !== 'undefined' && process.env) {
+      return process.env.API_KEY;
+    }
+  } catch (e) {
+    // Ignore error
+  }
+  return '';
+};
+
+const apiKey = getApiKey() || '';
 // Initialize conditionally to avoid crashing if key is missing during dev (though strictly required by prompt)
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
